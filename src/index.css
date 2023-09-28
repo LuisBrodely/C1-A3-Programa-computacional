@@ -1,0 +1,30 @@
+.container {
+  background-color: aqua;
+  display: flex;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 9999px;
+}
+
+.container--block {
+  display: flex;
+  align-items: center;
+}
+
+.container--text {
+  margin: 0 18px;
+}
+
+.rojo {
+  background-color: red;
+}
+
+.verde {
+  background-color: green;
+}
