@@ -109,38 +109,75 @@ const App: React.FC = () => {
       <input type="text" value={inputValue} onChange={handleInputChange} />
       <div>
         {characters.length > 0 && (
-          <p className="container">
+          <div className="container">
             Characteres:{" "}
+            <p>
+              <div className="container">
+                <p className="circle">Q0</p>
+              </div>
+            </p>
             {characters.map((character, index) => (
-              <h2 key={index} className="circle">
-                {   character === "v" && index === 0
-                  ? character + " - Q1"
-                  : character === "w" && index === 0
-                  ? character + " - Q10"
-                  : /[a-zA-Z]/.test(character) && index === 1
-                  ? character + " - Q2"
-                  : character === '-' && index === 2
-                  ? character + " - Q3"
-                  : character === "0" && index === 3
-                  ? character + " - Q4"
-                  : /[1-9]/.test(character) && index === 3
-                  ? character + " - Q11"
-                  : character === "0" && index === 4
-                  ? character + " - Q5"
-                  : /[1-9]/.test(character) && index === 4
-                  ? character + " - Q12"
-                  : character === "0" && index === 5
-                  ? character + " - Q6"
-                  : /[1-9]/.test(character) && index === 5
-                  ? character + " - Q13"
-                  : /[0-9]/.test(character) && index === 6
-                  ? character + " - Q7"
-                  : character === '-' && index === 7
-                  ? character + " - Q8"
-                  : /[a-zA-Z]/.test(character) && index === 8 ? character + ' - Q9 ' : character}
-              </h2>
+              <p key={index}>
+                {character === "v" && index === 0 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q1</p>
+                  </div>
+                ) : character === "w" && index === 0 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q10</p>
+                  </div>
+                ) : /[a-zA-Z]/.test(character) && index === 1 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q2</p>
+                  </div>
+                ) : character === "-" && index === 2 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q3</p>
+                  </div>
+                ) : character === "0" && index === 3 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q4</p>
+                  </div>
+                ) : /[1-9]/.test(character) && index === 3 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q11</p>
+                  </div>
+                ) : character === "0" && index === 4 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q5</p>
+                  </div>
+                ) : /[1-9]/.test(character) && index === 4 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q12</p>
+                  </div>
+                ) : character === "0" && index === 5 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q6</p>
+                  </div>
+                ) : /[1-9]/.test(character) && index === 5 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q13</p>
+                  </div>
+                ) : /[0-9]/.test(character) && index === 6 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q7</p>
+                  </div>
+                ) : character === "-" && index === 7 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q8</p>
+                  </div>
+                ) : /[a-zA-Z]/.test(character) && index === 8 ? (
+                  <div className="container">
+                    <h1>{character}</h1> <p className="circle">Q9</p>
+                  </div>
+                ) : (
+                  <div className="container">
+                    <h1>{character}</h1>
+                  </div>
+                )}
+              </p>
             ))}
-          </p>
+          </div>
         )}
       </div>
       {invalidCharacterDetected && <p>Carácter inválido detectado.</p>}
